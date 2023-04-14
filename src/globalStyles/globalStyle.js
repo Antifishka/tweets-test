@@ -1,10 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
+import { theme } from 'globalStyles/theme';
 
 export const GlobalStyle = createGlobalStyle`
  body {
     margin: 0;
-   
+    font-family: 'Montserrat', sans-serif;
+    font-size: ${theme.fontSizes.s};
+    line-height: ${theme.lineHeights.text};
   }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

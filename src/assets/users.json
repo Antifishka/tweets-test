@@ -1,44 +1,44 @@
 [
  {
   "user": "Martin Shields II",
-  "tweets": 19,
-  "followers": 95,
-  "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/741.jpg",
+  "tweets": 777,
+  "followers": 100500,
+  "avatar": "./avatars/Hansel.png",
   "id": "1"
  },
  {
   "user": "Evelyn Haag",
-  "tweets": 48,
-  "followers": 15,
-  "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/911.jpg",
+  "tweets": 333,
+  "followers": 100800,
+  "avatar": "./avatars/Anna.avif",
   "id": "2"
  },
  {
   "user": "Marion Quigley",
-  "tweets": 83,
-  "followers": 29,
-  "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/89.jpg",
+  "tweets": 999,
+  "followers": 100100,
+  "avatar": "./avatars/Robert.avif",
   "id": "3"
  },
  {
   "user": "Debra Pouros",
   "tweets": 97,
   "followers": 86,
-  "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/551.jpg",
+  "avatar": "./avatars/Lusy.avif",
   "id": "4"
  },
  {
   "user": "Walter Pacocha",
   "tweets": 61,
   "followers": 31,
-  "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/387.jpg",
+  "avatar": "./avatars/Monika.jpg",
   "id": "5"
  },
  {
   "user": "Roberto Schmeler",
   "tweets": 36,
   "followers": 43,
-  "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/615.jpg",
+  "avatar": "./avatars/Lily.avif",
   "id": "6"
  },
  {
@@ -52,7 +52,7 @@
   "user": "Victoria Kuphal",
   "tweets": 84,
   "followers": 2,
-  "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/386.jpg",
+  "avatar": "./avatars/Bob.jpg",
   "id": "8"
  },
  {
@@ -66,7 +66,7 @@
   "user": "Fred Raynor",
   "tweets": 93,
   "followers": 16,
-  "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/142.jpg",
+  "avatar": "./avatars/Adam.avif",
   "id": "10"
  },
  {

@@ -1,16 +1,34 @@
 import styled from 'styled-components';
 import { theme } from 'globalStyles/theme';
+import { ReactComponent as LogoIcon } from "assets/icons/logo.svg";
 import bg from "assets/images/bg.png";
 
 export const CardWrapper = styled.div`
+    position: relative;
     width: 380px;
+    padding-top: 28px;
+    padding-bottom: 36px;
     border-radius: ${theme.radii.normal};
     box-shadow: ${theme.shadows.box};
-    background: ${theme.colors.bg};
+
+    text-align: center;
+
+    background: ${theme.colors.gradient};
+`
+
+export const Logo = styled(LogoIcon)`
+    position: absolute;
+    left: 20px;
+    top: 20px;
 `
 
 export const TopBox = styled.div`
-    padding: 20px 20px 36px 20px;
+    margin: 0 auto 18px;
+    width: 308px;
+    height: 168px;
+    background-image: url(${bg});
+    background-repeat: no-repeat;
+    background-size: contain;
 `
 
 export const Thumb = styled.div`
@@ -24,7 +42,39 @@ export const Thumb = styled.div`
 
 export const MediumBox = styled.div`
     height: 8px;
+    margin-bottom: 62px;
     box-shadow: ${theme.shadows.line};
-    background: ${theme.colors.bgLignt};
+    background: ${theme.colors.secondaryText};
+`
+
+export const Text = styled.p`
+    margin-bottom: 16px;
+    font-size: ${theme.fontSizes.m};
+    text-align: center;
+    text-transform: uppercase;
+
+    color: ${theme.colors.secondaryText};
+
+    :last-of-type {
+        margin-bottom: 26px;
+    }
+`
+
+export const Button = styled.button`
+    min-width: 196px;
+    padding: 14px 39px;
+    border-radius: ${theme.radii.button};
+    border: none;
+    box-shadow: ${theme.shadows.button};
+    
+    cursor: pointer;
+
+    font-size: ${theme.fontSizes.s};
+    text-transform: uppercase;
+
+    color: ${theme.colors.mainText};
+    background-color: ${({ theme, children }) =>
+        children === "Follow" ? theme.colors.accent : theme.colors.secondaryText};
+    /* background: ${theme.colors.secondaryText}; */
 `
 
