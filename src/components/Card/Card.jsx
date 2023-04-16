@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+import useLocalStorage from "hooks/useLocalStorage";
 import { CardWrapper, Logo, TopBox, MediumBox, Text, Button } from "./Card.styled";
 import { Avatar } from "components/Avatar/Avatar";
 import { getFormafedFollowers } from "helpers/getFormafedFollowers";
 import PropTypes from "prop-types";
 
 export const Card = ({ name, tweets, initialFollowers, avatar }) => {
-    const [followers, setFollowers] = useState(initialFollowers);
+  const [followers, setFollowers] = useLocalStorage(`${name}`, initialFollowers);
 
     const handleClick = () => {
     if (followers === initialFollowers) {

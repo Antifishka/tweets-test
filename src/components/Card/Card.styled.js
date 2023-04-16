@@ -73,8 +73,14 @@ export const Button = styled.button`
     text-transform: uppercase;
 
     color: ${theme.colors.mainText};
-    background-color: ${({ theme, children }) =>
-        children === "Follow" ? theme.colors.accent : theme.colors.secondaryText};
-    /* background: ${theme.colors.secondaryText}; */
+    background-color: ${({ children }) =>
+    children === "Following" ? theme.colors.accent : theme.colors.secondaryText};  
+        
+    opacity: 1;
+    transition: opacity ${theme.transition.main};
+
+    &:hover {
+        opacity: 0.8;
+    }    
 `
 
