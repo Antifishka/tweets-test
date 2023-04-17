@@ -1,47 +1,25 @@
-import { useState, useMemo } from "react";
-import users from "assets/users.json";
+import { lazy } from "react";
+import { Routes, Route } from "react-router-dom";
 import { GlobalStyle } from 'globalStyles/globalStyle';
-import { Box } from 'components/Box/Box';
-import { CardList } from './CardList/CardList';
-import { PaginationMUI } from './Pagination/Pagination';
-import { ScrollUpButton } from "components/ScrollUpButton/ScrollUpButton";
-import { PER_PAGE } from "constants/constants";
-import { theme } from 'globalStyles/theme';
+import { Layout } from "./Layout/Layout";
 
-function App() {
-  const [page, setPage] = useState(1);
+const Home = lazy(() => import('pages/Home/Home'));
+const Tweets = lazy(() => import('pages/Tweets/Tweets'));
 
-  const pages = Math.ceil(users.length / PER_PAGE);
-  console.log(pages, "total pages");
-  
-  const handleChangePage = (e, value) => {
-    setPage(value);
-  };
-  
-  const displayedUsers = useMemo(() => {
-    const startIndex = (page - 1) * PER_PAGE;
-    const endIndex = startIndex + PER_PAGE;
-    const displayedUsers = users.slice(startIndex, endIndex);
-    console.log(displayedUsers, "displayed users");
-
-    return displayedUsers;
-  }, [page]);
-
-  return (
+const App = () => {
+  return (  
     <>
-      <Box as="main"
-        maxWidth={theme.sizes.maxWidth}
-        m="0 auto"
-        p={4}>
-        <CardList displayedUsers={displayedUsers} />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/tweets" element={<Tweets />} />
+          <Route path="*" element={<Home />} />
+        </Route>  
+      </Routes>
 
-        <PaginationMUI page={page} pages={pages} onClick={handleChangePage} />
-      </Box>
-
-      <ScrollUpButton />
       <GlobalStyle />
-    </>
+    </>  
   );
-}
-
+};
+ 
 export default App;

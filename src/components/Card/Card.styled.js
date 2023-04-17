@@ -50,6 +50,7 @@ export const MediumBox = styled.div`
 export const Text = styled.p`
     margin-bottom: 16px;
     font-size: ${theme.fontSizes.m};
+    font-weight: 500;
     text-align: center;
     text-transform: uppercase;
 
@@ -70,6 +71,7 @@ export const Button = styled.button`
     cursor: pointer;
 
     font-size: ${theme.fontSizes.s};
+    font-weight: 600;
     text-transform: uppercase;
 
     color: ${theme.colors.mainText};

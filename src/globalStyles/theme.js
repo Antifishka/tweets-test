@@ -16,10 +16,12 @@ export const theme = {
         xs: '16px',
         s: '18px',
         m: '20px',
+        l: '32px',
+        xl: '64px',
     },
     fontWeights: {
-        normal: 400,
-        bold: 700,
+        medium: 500,
+        semi: 600,
     },
     lineHeights: {
         text: 1.2,
@@ -28,7 +30,7 @@ export const theme = {
         maxWidth: '1300px',
     },
     borders: {
-        avatar: '9px solid #EBD8FF',
+        normal: '1px solid #373737',
     },
     radii: {
         none: '0',
@@ -43,6 +45,6 @@ export const theme = {
         button: '0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25)',
     },
     transition: {
-        main: '250ms linear',
+        main: '250ms cubic-bezier(0.4, 0, 0.2, 1);',
     },   
 }
