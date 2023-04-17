@@ -1,7 +1,17 @@
 import { Box } from "components/Box/Box";
 import { Card } from "components/Card/Card";
+import PropTypes from "prop-types";
 
-export const CardList = ({displayedUsers}) => {
+export const CardList = ({ displayedUsers, filter }) => {
+    // const filteredTweets = () => {
+    //     if (filter === 'show all') {
+    //         return true;
+    //     } else if (filter === 'follow') {
+    //     return tweet.follow;
+    //     } else if (filter === 'followings') {
+    //     return tweet.following;
+    //     }
+    // };
 
     return (
         <Box display="flex"
@@ -20,4 +30,8 @@ export const CardList = ({displayedUsers}) => {
                 </li>))}
         </Box>
     );
+};
+
+CardList.propTypes = {
+    displayedUsers: PropTypes.array.isRequired,
 };

@@ -15,7 +15,7 @@ export const Header = styled.header`
 `;
 
 export const Link = styled(NavLink)`
-    padding: 14px 16px;
+    padding: 14px;
     min-width: 107px;
     border-radius: ${theme.radii.button};
     box-shadow: ${theme.shadows.button};

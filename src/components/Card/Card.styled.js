@@ -66,7 +66,6 @@ export const Button = styled.button`
     border-radius: ${theme.radii.button};
     border: none;
     box-shadow: ${theme.shadows.button};
-    
     cursor: pointer;
 
     font-size: ${theme.fontSizes.s};
