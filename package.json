@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Antifishka.github.io/tweets-test",
+  "homepage": "https://antifishka.github.io/tweets-test/",
   "dependencies": {
     "@mui/material": "^5.12.0",
     "modern-normalize": "^1.1.0",
