@@ -22,7 +22,7 @@ export const Link = styled(NavLink)`
     cursor: pointer;
 
     font-size: ${theme.fontSizes.s};
-    font-weight: 500;
+    font-weight: ${theme.fontWeights.semiBold};
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;

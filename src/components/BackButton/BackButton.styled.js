@@ -8,9 +8,8 @@ export const StyledLink = styled(Link)`
   gap: 8px;
   margin-bottom: ${theme.space[3]}px;
   
-  font-weight: ${theme.fontWeights.medium};
+  font-size: ${theme.fontSizes.m};
   text-transform: uppercase;
-
 
   color: ${theme.colors.mainText};
   transition: ${theme.transition.main};

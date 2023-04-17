@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
  body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
+    font-weight: ${theme.fontWeights.medium};
     font-size: ${theme.fontSizes.s};
     line-height: ${theme.lineHeights.text};
   }

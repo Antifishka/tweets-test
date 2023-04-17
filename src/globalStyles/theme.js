@@ -21,7 +21,7 @@ export const theme = {
     },
     fontWeights: {
         medium: 500,
-        semi: 600,
+        semiBold: 600,
     },
     lineHeights: {
         text: 1.2,
