@@ -3,15 +3,15 @@ import { Card } from "components/Card/Card";
 import PropTypes from "prop-types";
 
 export const CardList = ({ displayedUsers, filter }) => {
-    // const filteredTweets = () => {
-    //     if (filter === 'show all') {
-    //         return true;
-    //     } else if (filter === 'follow') {
-    //     return tweet.follow;
-    //     } else if (filter === 'followings') {
-    //     return tweet.following;
-    //     }
-    // };
+//     const filteredUsers = displayedUsers.filter((user) => {
+//     if (filter === 'show all') {
+//       return true;
+//     } else if (filter === 'follow') {
+//       return user.follow;
+//     } else if (filter === 'followings') {
+//       return user.following;
+//     }
+//   });
 
     return (
         <Box display="flex"
