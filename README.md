@@ -1,6 +1,10 @@
 # Tweetsbook application
 
-Creating tweet cards and adding interactivity at the click of a button.
+Creating tweet cards and adding interactivity at the click of a button
+
+## 💻 Tech Stack
+
+React, React Router, Styled Components, Styled System
 
 📌 The general appearance of the card in two states - Follow and Following:
-![Interactivity](https://monosnap.com/file/fRDdY2Ulq65DkZ65Lv06spSFx2C5d6)
+![Interactivity](https://i.postimg.cc/2Sh97XHq/2023-04-18-13-12-26.png)
