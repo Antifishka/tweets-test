@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import { getFilteredUsers } from "helpers/getFilteredUsers";
 import { Box } from "components/Box/Box";
 import { Card } from "components/Card/Card";
 import PropTypes from "prop-types";
@@ -11,19 +12,10 @@ export const CardList = ({ displayedUsers, filter }) => {
             ? { ...user, following: !user.following }
             : user))};
     
-    const getFilteredUsers = () => {
-        if (filter === 'show all') {
-            const filteredUsers = users;
-            console.log(filteredUsers, "filteredUsers")
-            return filteredUsers;
-        } else if (filter === 'follow') {
-            return users.filter((user) => user.following === false);
-        } else if (filter === 'followings') {
-            return users.filter((user) => user.following === true);
-        };
-    };
-
-    const filteredUsers = getFilteredUsers();
+    
+    const filteredUsers = useMemo(() =>
+        getFilteredUsers(users, filter),
+        [users, filter]);
 
     return (
         <Box display="flex"
