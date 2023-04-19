@@ -5,14 +5,16 @@ import { Avatar } from "components/Avatar/Avatar";
 import { getFormafedFollowers } from "helpers/getFormafedFollowers";
 import PropTypes from "prop-types";
 
-export const Card = ({ name, tweets, initialFollowers, avatar }) => {
+export const Card = ({ id, name, tweets, initialFollowers, avatar, onChange }) => {
   const [followers, setFollowers] = useLocalStorage(`${name}`, initialFollowers);
 
     const handleClick = () => {
     if (followers === initialFollowers) {
       setFollowers((prevState) => prevState + 1);
+      onChange(id);
     } else {
       setFollowers((prevState) => prevState - 1);
+      onChange(id);
     }
   };
 
@@ -36,8 +38,10 @@ export const Card = ({ name, tweets, initialFollowers, avatar }) => {
 };
 
 Card.propTypes = {
-    name: PropTypes.string.isRequired,
-    tweets: PropTypes.number.isRequired,
-    initialFollowers: PropTypes.number.isRequired,
-    avatar: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  tweets: PropTypes.number.isRequired,
+  initialFollowers: PropTypes.number.isRequired,
+  avatar: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };

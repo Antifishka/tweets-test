@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 export const Dropdown = ({ onChange }) => {
 
     return (
-        <Select onChange={onChange}>
+        <Select onChange={onChange} defaultValue="show all" >
             <option value="show all">Show all</option>
             <option value="follow">Follow</option>
             <option value="followings">Followings</option>

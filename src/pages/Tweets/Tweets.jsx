@@ -16,8 +16,9 @@ export default function Tweets() {
     const pages = Math.ceil(users.length / PER_PAGE);
     console.log(pages, "total pages");
 
-    const handleFilterChange = (event) => {
-        setFilter(event.target.value);
+    const handleFilterChange = (e) => {
+        setFilter(e.target.value);
+        console.log(filter, "filter");
     };
     
     const handleChangePage = (e, value) => {
@@ -41,10 +42,10 @@ export default function Tweets() {
 
             <Box display="flex" justifyContent="space-between" alignItems="center">
                 <BackButton>Go back</BackButton>
-                <Dropdown onChange={handleFilterChange} filter={filter} />
+                <Dropdown onChange={handleFilterChange} />
             </Box>
                     
-            <CardList displayedUsers={displayedUsers} />
+            <CardList displayedUsers={displayedUsers} filter={filter} />
 
             <PaginationMUI page={page} pages={pages} onClick={handleChangePage} />
 
