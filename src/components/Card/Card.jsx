@@ -16,24 +16,23 @@ export const Card = ({ name, tweets, initialFollowers, avatar }) => {
     }
   };
 
-    return (
-      <CardWrapper>
-        <Logo />
-        <TopBox />
+  return (
+    <CardWrapper>
+      <Logo />
+      <TopBox />
 
-        <MediumBox/>
-        <Avatar name={name} avatar={avatar} />
+      <MediumBox/>
+      <Avatar name={name} avatar={avatar} />
             
-        <Text> {tweets} tweets</Text>
-        <Text> {getFormafedFollowers(followers)} followers</Text>
+      <Text> {tweets} tweets</Text>
+      <Text> {getFormafedFollowers(followers)} followers</Text>
 
-        <Button type="button"
-          ollowers={followers}
-          onClick={handleClick}>
-          {followers === initialFollowers ? "Follow" : "Following"}
-        </Button>
-      </CardWrapper>
-    );
+      <Button type="button"
+        onClick={handleClick}>
+        {followers === initialFollowers ? "Follow" : "Following"}
+      </Button>
+    </CardWrapper>
+  );
 };
 
 Card.propTypes = {
