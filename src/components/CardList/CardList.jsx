@@ -12,7 +12,6 @@ export const CardList = ({ displayedUsers, filter }) => {
             ? { ...user, following: !user.following }
             : user))};
     
-    
     const filteredUsers = useMemo(() =>
         getFilteredUsers(users, filter),
         [users, filter]);

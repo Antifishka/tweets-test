@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
 export const Card = ({ id, name, tweets, initialFollowers, avatar, onChange }) => {
   const [followers, setFollowers] = useLocalStorage(`${name}`, initialFollowers);
 
-    const handleClick = () => {
+  const handleClick = () => {
     if (followers === initialFollowers) {
       setFollowers((prevState) => prevState + 1);
       onChange(id);
