@@ -1,5 +1,6 @@
-import { useState, useMemo } from "react";
-import users from "assets/users.json";
+import { useState, useEffect, useMemo } from "react";
+import API from 'services/api';
+// import users from "assets/users.json";
 import { Helmet } from 'react-helmet';
 import { BackButton } from "components/BackButton/BackButton";
 import { Dropdown } from "components/Dropdown/Dropdown";
@@ -10,8 +11,28 @@ import { PER_PAGE } from "constants/constants";
 import { Box } from "components/Box/Box";
 
 export default function Tweets() {
+    const [users, setUsers] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
     const [filter, setFilter] = useState('show all'); 
     const [page, setPage] = useState(1);
+
+    useEffect(() => {
+        setIsLoading(true);
+        getUsers();
+
+        async function getUsers() {
+        try {
+            const fetchUsers = await API.fetchUsers();
+            console.log(fetchUsers);
+            setUsers(fetchUsers);
+
+        } catch (error) {
+            console.log(error);
+        } finally {
+            setIsLoading(false);
+        };
+        };
+    }, []);
 
     const pages = Math.ceil(users.length / PER_PAGE);
     console.log(pages, "total pages");
@@ -32,7 +53,7 @@ export default function Tweets() {
         console.log(displayedUsers, "displayed users");
 
         return displayedUsers;
-    }, [page]);
+    }, [users, page]);
 
     return (
         <Box p="32px 0" as="main">
@@ -44,6 +65,8 @@ export default function Tweets() {
                 <BackButton>Go back</BackButton>
                 <Dropdown onChange={handleFilterChange} />
             </Box>
+
+            {isLoading && <div>Loading...</div>} 
                     
             <CardList displayedUsers={displayedUsers} filter={filter} />
 

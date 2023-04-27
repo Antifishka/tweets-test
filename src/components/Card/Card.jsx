@@ -11,10 +11,10 @@ export const Card = ({ id, name, tweets, initialFollowers, avatar, onChange }) =
   const handleClick = () => {
     if (followers === initialFollowers) {
       setFollowers((prevState) => prevState + 1);
-      onChange(id);
+      // onChange(id);
     } else {
       setFollowers((prevState) => prevState - 1);
-      onChange(id);
+      // onChange(id);
     }
   };
 
@@ -43,5 +43,5 @@ Card.propTypes = {
   tweets: PropTypes.number.isRequired,
   initialFollowers: PropTypes.number.isRequired,
   avatar: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
+  // onChange: PropTypes.func.isRequired,
 };

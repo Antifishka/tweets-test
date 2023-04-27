@@ -1,20 +1,18 @@
-import { useState, useMemo } from "react";
-import { getFilteredUsers } from "helpers/getFilteredUsers";
+// import { useState, useMemo } from "react";
+// import { getFilteredUsers } from "helpers/getFilteredUsers";
 import { Box } from "components/Box/Box";
 import { Card } from "components/Card/Card";
 import PropTypes from "prop-types";
 
 export const CardList = ({ displayedUsers, filter }) => {
-    const [users, setUsers] = useState(displayedUsers);
-
-    const changeStatus = (userId) => {
-        setUsers(prevState => prevState.map(user => user.id === userId
-            ? { ...user, following: !user.following }
-            : user))};
+    // const changeStatus = (userId) => {
+    //     setUsers(prevState => prevState.map(user => user.id === userId
+    //         ? { ...user, following: !user.following }
+    //         : user))};
     
-    const filteredUsers = useMemo(() =>
-        getFilteredUsers(users, filter),
-        [users, filter]);
+    // const filteredUsers = useMemo(() =>
+    //     getFilteredUsers(users, filter),
+    //     [users, filter]);
 
     return (
         <Box display="flex"
@@ -23,14 +21,14 @@ export const CardList = ({ displayedUsers, filter }) => {
             gridGap="48px"
             mb="32px"
             as="ul">
-            {filteredUsers?.map(({ id, user, tweets, followers, avatar, following }) => (
+            {displayedUsers?.map(({ id, user, tweets, followers, avatar, following }) => (
                 <li key={id}>
                     <Card id={id}
                         name={user}
                         tweets={tweets}
                         initialFollowers={followers}
                         avatar={avatar}
-                        onChange={changeStatus}
+                        // onChange={changeStatus}
                     />
                 </li>))}
         </Box>
