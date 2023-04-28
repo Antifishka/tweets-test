@@ -4,7 +4,7 @@ import { Box } from "components/Box/Box";
 import { Card } from "components/Card/Card";
 import PropTypes from "prop-types";
 
-export const CardList = ({ displayedUsers, filter }) => {
+export const CardList = ({ displayedUsers, filter, isLoading }) => {
     // const changeStatus = (userId) => {
     //     setUsers(prevState => prevState.map(user => user.id === userId
     //         ? { ...user, following: !user.following }
@@ -17,7 +17,6 @@ export const CardList = ({ displayedUsers, filter }) => {
     return (
         <Box display="flex"
             flexWrap="wrap"
-            justifyContent="center"
             gridGap="48px"
             mb="32px"
             as="ul">
@@ -28,6 +27,7 @@ export const CardList = ({ displayedUsers, filter }) => {
                         tweets={tweets}
                         initialFollowers={followers}
                         avatar={avatar}
+                        isLoading={isLoading}
                         // onChange={changeStatus}
                     />
                 </li>))}

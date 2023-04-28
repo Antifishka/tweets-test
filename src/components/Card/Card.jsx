@@ -1,11 +1,12 @@
 import React from "react";
 import useLocalStorage from "hooks/useLocalStorage";
+import { SkeletonMUI } from "components/Skeleton/Skeleton";
 import { CardWrapper, Logo, Thumb, Text, Button } from "./Card.styled";
 import { Avatar } from "components/Avatar/Avatar";
 import { getFormafedFollowers } from "helpers/getFormafedFollowers";
 import PropTypes from "prop-types";
 
-export const Card = ({ id, name, tweets, initialFollowers, avatar, onChange }) => {
+export const Card = ({ id, name, tweets, initialFollowers, avatar, isLoading, onChange }) => {
   const [followers, setFollowers] = useLocalStorage(`${name}`, initialFollowers);
 
   const handleClick = () => {
@@ -19,20 +20,24 @@ export const Card = ({ id, name, tweets, initialFollowers, avatar, onChange }) =
   };
 
   return (
-    <CardWrapper>
-      <Logo />
-      <Thumb />
+  <>
+    {isLoading
+      ? <SkeletonMUI />
+      : <CardWrapper>
+          <Logo />
+          <Thumb />
 
-      <Avatar name={name} avatar={avatar} />
-                
-      <Text> {tweets} tweets</Text>
-      <Text> {getFormafedFollowers(followers)} followers</Text>
+          <Avatar name={name} avatar={avatar} />
+                    
+          <Text> {tweets} tweets</Text>
+          <Text> {getFormafedFollowers(followers)} followers</Text>
 
-      <Button type="button"
-        onClick={handleClick}>
-        {followers === initialFollowers ? "Follow" : "Following"}
-      </Button>
-    </CardWrapper>
+          <Button type="button"
+            onClick={handleClick}>
+            {followers === initialFollowers ? "Follow" : "Following"}
+          </Button>
+        </CardWrapper>}
+    </>    
   );
 };
 

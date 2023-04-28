@@ -1,6 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
 import API from 'services/api';
-// import users from "assets/users.json";
 import { Helmet } from 'react-helmet';
 import { BackButton } from "components/BackButton/BackButton";
 import { Dropdown } from "components/Dropdown/Dropdown";
@@ -23,7 +22,6 @@ export default function Tweets() {
         async function getUsers() {
         try {
             const fetchUsers = await API.fetchUsers();
-            console.log(fetchUsers);
             setUsers(fetchUsers);
 
         } catch (error) {
@@ -71,6 +69,7 @@ export default function Tweets() {
             <CardList
                 displayedUsers={displayedUsers}
                 filter={filter}
+                isLoading={isLoading}
             />
 
             <PaginationMUI page={page} pages={pages} onClick={handleChangePage} />
