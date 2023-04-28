@@ -3,6 +3,7 @@ import { theme } from 'globalStyles/theme';
 
 export const AvatarWrapper = styled.div`
     position: absolute;
+    z-index: 100;
     top: 178px;
     left: calc(50% - 40px);
     display: flex;
@@ -20,6 +21,7 @@ export const AvatarThumb = styled.div`
     width: 62px;
     height: 62px;
     border-radius: ${theme.radii.round};
+    box-shadow: ${theme.shadows.innerAvatar};
     overflow: hidden;
 
     background: ${theme.colors.background};

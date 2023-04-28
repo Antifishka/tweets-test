@@ -14,6 +14,17 @@ export const CardWrapper = styled.div`
     text-align: center;
 
     background: ${theme.colors.gradient};
+
+    ::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 214px;
+        height: 8px;
+        box-shadow: ${theme.shadows.line};
+        background: ${theme.colors.secondaryText};
+    }
 `
 
 export const Logo = styled(LogoIcon)`
@@ -22,29 +33,14 @@ export const Logo = styled(LogoIcon)`
     top: 20px;
 `
 
-export const TopBox = styled.div`
+export const Thumb = styled.div`
     margin: 0 auto 18px;
     width: 308px;
     height: 168px;
+    margin-bottom: 88px;
     background-image: url(${bg});
     background-repeat: no-repeat;
     background-size: contain;
-`
-
-export const Thumb = styled.div`
-    margin: 8px auto 18px auto;
-    width: 308px;
-    height: 168px;
-    background-image: url(${bg});
-    background-repeat: no-repeat;
-    background-size: contain;
-`
-
-export const MediumBox = styled.div`
-    height: 8px;
-    margin-bottom: 62px;
-    box-shadow: ${theme.shadows.line};
-    background: ${theme.colors.secondaryText};
 `
 
 export const Text = styled.p`

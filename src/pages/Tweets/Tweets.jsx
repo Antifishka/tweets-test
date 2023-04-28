@@ -66,9 +66,12 @@ export default function Tweets() {
                 <Dropdown onChange={handleFilterChange} />
             </Box>
 
-            {isLoading && <div>Loading...</div>} 
+            {isLoading && <div>LOADING...</div>}
                     
-            <CardList displayedUsers={displayedUsers} filter={filter} />
+            <CardList
+                displayedUsers={displayedUsers}
+                filter={filter}
+            />
 
             <PaginationMUI page={page} pages={pages} onClick={handleChangePage} />
 

@@ -14,21 +14,21 @@ const theme = createTheme({
 });
 
 export const PaginationMUI = ({page, pages, onClick}) => {
-    return (
-        <Box display="flex" justifyContent="center">
-            <ThemeProvider theme={theme}>
-                <Stack spacing={3}>
-                    <Pagination
-                        color="primary" 
-                        size="large"
-                        count={pages}
-                        page={page}
-                        onChange={onClick}
-                    />
-                </Stack>
-            </ThemeProvider>    
-        </Box>
-    );
+  return (
+    <Box display="flex" justifyContent="center">
+      <ThemeProvider theme={theme}>
+        <Stack spacing={3}>
+          <Pagination
+            color="primary" 
+            size="large"
+            count={pages}
+            page={page}
+            onChange={onClick}
+          />
+        </Stack>
+      </ThemeProvider>    
+    </Box>
+  );
 }
 
 PaginationMUI.propTypes = {
