@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import API from 'services/api';
 import { Helmet } from 'react-helmet';
+import { Loader } from "components/Loader/Loader";
 import { BackButton } from "components/BackButton/BackButton";
 import { Dropdown } from "components/Dropdown/Dropdown";
 import { CardList } from 'components/CardList/CardList';
@@ -64,7 +65,7 @@ export default function Tweets() {
                 <Dropdown onChange={handleFilterChange} />
             </Box>
 
-            {isLoading && <div>LOADING...</div>}
+            {isLoading && <Loader />}
                     
             <CardList
                 displayedUsers={displayedUsers}

@@ -4,7 +4,7 @@ import { Box } from "components/Box/Box";
 import { Card } from "components/Card/Card";
 import PropTypes from "prop-types";
 
-export const CardList = ({ displayedUsers, filter, isLoading }) => {
+export const CardList = ({ displayedUsers, filter }) => {
     // const changeStatus = (userId) => {
     //     setUsers(prevState => prevState.map(user => user.id === userId
     //         ? { ...user, following: !user.following }
@@ -27,7 +27,6 @@ export const CardList = ({ displayedUsers, filter, isLoading }) => {
                         tweets={tweets}
                         initialFollowers={followers}
                         avatar={avatar}
-                        isLoading={isLoading}
                         // onChange={changeStatus}
                     />
                 </li>))}
