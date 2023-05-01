@@ -21,7 +21,7 @@ export const PaginationMUI = ({page, pages, onClick}) => {
           <Pagination
             color="primary" 
             size="large"
-            count={pages}
+            count={pages || 1}
             page={page}
             onChange={onClick}
           />

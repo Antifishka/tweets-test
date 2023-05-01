@@ -1,9 +1,12 @@
 import { Helmet } from 'react-helmet';
 import { Box } from "components/Box/Box";
 import { theme } from 'globalStyles/theme';
-import img from 'assets/images/twitter.png'
+import imgPath from 'assets/images/twitter.png';
+import imgPathRetina from 'assets/images/twitter@2x.png';
 
 export default function Home() {
+    const imgURL = `${imgPath} 1x, ${imgPathRetina} 2x`;
+
     return (
         <Box minHeight= 'calc(100vh - 50px)'
             display='flex'
@@ -22,9 +25,10 @@ export default function Home() {
                 as="h1">
                 Wellcome to Tweetsbook{' '}
             </Box>
-            <img src={img}
+            <img src={imgPath}
+                srcSet={imgURL}
                 alt="tweetsbook"
-                width="120px" />
+                width="200px" />
         </Box>
     );
 }
