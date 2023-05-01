@@ -6,7 +6,10 @@ import { theme } from 'globalStyles/theme';
 
 export const Layout = () => {
   return (
-    <Box maxWidth={theme.sizes.maxWidth}
+    <Box
+      position="relative" 
+      minHeight="100%"
+      maxWidth={theme.sizes.maxWidth}
       m="0 auto"
       p="0 32px">
       <AppBar />

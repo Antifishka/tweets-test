@@ -3,12 +3,19 @@ import 'modern-normalize';
 import { theme } from 'globalStyles/theme';
 
 export const GlobalStyle = createGlobalStyle`
- body {
+  html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: ${theme.fontWeights.medium};
     font-size: ${theme.fontSizes.s};
     line-height: ${theme.lineHeights.text};
+  }
+  #root { 
+    height: 100%; 
   }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

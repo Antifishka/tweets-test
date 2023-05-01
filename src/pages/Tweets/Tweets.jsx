@@ -55,12 +55,17 @@ export default function Tweets() {
     }, [users, page]);
 
     return (
-        <Box p="32px 0" as="main">
+        <Box p="32px 0 72px" 
+            minHeight="100%"
+            as="main">
             <Helmet>
                 <title>Tweets</title>
             </Helmet>  
 
-            <Box display="flex" justifyContent="space-between" alignItems="center">
+            <Box
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center" >
                 <BackButton>Go back</BackButton>
                 <Dropdown onChange={handleFilterChange} />
             </Box>

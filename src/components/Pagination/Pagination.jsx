@@ -2,7 +2,7 @@ import * as React from 'react';
 import { createTheme, ThemeProvider  } from '@mui/material/styles';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import { Box } from 'components/Box/Box';
+import { PaginationWrapper } from './Pagination.styled';
 import PropTypes from 'prop-types';
 
 const theme = createTheme({
@@ -15,7 +15,7 @@ const theme = createTheme({
 
 export const PaginationMUI = ({page, pages, onClick}) => {
   return (
-    <Box display="flex" justifyContent="center">
+    <PaginationWrapper>
       <ThemeProvider theme={theme}>
         <Stack spacing={3}>
           <Pagination
@@ -27,7 +27,7 @@ export const PaginationMUI = ({page, pages, onClick}) => {
           />
         </Stack>
       </ThemeProvider>    
-    </Box>
+    </PaginationWrapper>
   );
 }
 
