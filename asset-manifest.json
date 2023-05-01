@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/tweets-test/static/css/main.17654e45.css",
-    "main.js": "/tweets-test/static/js/main.8aa4b2e8.js",
-    "static/js/827.337fe042.chunk.js": "/tweets-test/static/js/827.337fe042.chunk.js",
-    "static/js/976.39ed39ca.chunk.js": "/tweets-test/static/js/976.39ed39ca.chunk.js",
-    "static/js/270.30ce143a.chunk.js": "/tweets-test/static/js/270.30ce143a.chunk.js",
-    "static/js/361.d2ee82cf.chunk.js": "/tweets-test/static/js/361.d2ee82cf.chunk.js",
-    "static/media/Montserrat-SemiBold.ttf": "/tweets-test/static/media/Montserrat-SemiBold.62b8eee010e3957d425f.ttf",
-    "static/media/Montserrat-Medium.ttf": "/tweets-test/static/media/Montserrat-Medium.a281f04d4c8926e7dea1.ttf",
-    "static/media/Montserrat-Regular.ttf": "/tweets-test/static/media/Montserrat-Regular.94bb495fba6077f669ed.ttf",
-    "static/media/bg.png": "/tweets-test/static/media/bg.010ab3c33bc13f300d33.png",
-    "static/media/logo.svg": "/tweets-test/static/media/logo.eb74a9cfcc8c2946c8beb2961898c04b.svg",
-    "index.html": "/tweets-test/index.html",
-    "main.17654e45.css.map": "/tweets-test/static/css/main.17654e45.css.map",
-    "main.8aa4b2e8.js.map": "/tweets-test/static/js/main.8aa4b2e8.js.map",
-    "827.337fe042.chunk.js.map": "/tweets-test/static/js/827.337fe042.chunk.js.map",
-    "976.39ed39ca.chunk.js.map": "/tweets-test/static/js/976.39ed39ca.chunk.js.map",
-    "270.30ce143a.chunk.js.map": "/tweets-test/static/js/270.30ce143a.chunk.js.map",
-    "361.d2ee82cf.chunk.js.map": "/tweets-test/static/js/361.d2ee82cf.chunk.js.map"
+    "main.css": "/Antifishka/tweets-test/static/css/main.17654e45.css",
+    "main.js": "/Antifishka/tweets-test/static/js/main.902cf768.js",
+    "static/js/827.c4a71b4d.chunk.js": "/Antifishka/tweets-test/static/js/827.c4a71b4d.chunk.js",
+    "static/js/39.b9e93861.chunk.js": "/Antifishka/tweets-test/static/js/39.b9e93861.chunk.js",
+    "static/js/270.9177bfc7.chunk.js": "/Antifishka/tweets-test/static/js/270.9177bfc7.chunk.js",
+    "static/js/320.7f8b2823.chunk.js": "/Antifishka/tweets-test/static/js/320.7f8b2823.chunk.js",
+    "static/media/Montserrat-SemiBold.ttf": "/Antifishka/tweets-test/static/media/Montserrat-SemiBold.62b8eee010e3957d425f.ttf",
+    "static/media/Montserrat-Medium.ttf": "/Antifishka/tweets-test/static/media/Montserrat-Medium.a281f04d4c8926e7dea1.ttf",
+    "static/media/Montserrat-Regular.ttf": "/Antifishka/tweets-test/static/media/Montserrat-Regular.94bb495fba6077f669ed.ttf",
+    "static/media/bg.png": "/Antifishka/tweets-test/static/media/bg.010ab3c33bc13f300d33.png",
+    "static/media/logo.svg": "/Antifishka/tweets-test/static/media/logo.eb74a9cfcc8c2946c8beb2961898c04b.svg",
+    "index.html": "/Antifishka/tweets-test/index.html",
+    "main.17654e45.css.map": "/Antifishka/tweets-test/static/css/main.17654e45.css.map",
+    "main.902cf768.js.map": "/Antifishka/tweets-test/static/js/main.902cf768.js.map",
+    "827.c4a71b4d.chunk.js.map": "/Antifishka/tweets-test/static/js/827.c4a71b4d.chunk.js.map",
+    "39.b9e93861.chunk.js.map": "/Antifishka/tweets-test/static/js/39.b9e93861.chunk.js.map",
+    "270.9177bfc7.chunk.js.map": "/Antifishka/tweets-test/static/js/270.9177bfc7.chunk.js.map",
+    "320.7f8b2823.chunk.js.map": "/Antifishka/tweets-test/static/js/320.7f8b2823.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.17654e45.css",
-    "static/js/main.8aa4b2e8.js"
+    "static/js/main.902cf768.js"
   ]
 }
