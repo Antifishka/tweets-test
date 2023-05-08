@@ -2,6 +2,7 @@ import { Box } from 'components/Box/Box';
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import { AppBar } from 'components/AppBar/AppBar';
+import { Footer } from 'components/Footer/Footer';
 import { theme } from 'globalStyles/theme';
 
 export const Layout = () => {
@@ -17,6 +18,8 @@ export const Layout = () => {
       <Suspense fallback={null}>
         <Outlet />
       </Suspense> 
+
+      <Footer />
     </Box>
   );
 };

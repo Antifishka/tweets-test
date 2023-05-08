@@ -3,6 +3,7 @@ import useLocalStorage from "hooks/useLocalStorage";
 import { CardWrapper, Logo, Thumb, Text, Button } from "./Card.styled";
 import { Avatar } from "components/Avatar/Avatar";
 import { getFormafedFollowers } from "helpers/getFormafedFollowers";
+import { getButtonStatus } from "helpers/getButtonStatus";
 import PropTypes from "prop-types";
 
 export const Card = ({ name, tweets, initialFollowers, avatar, filter }) => {
@@ -16,12 +17,7 @@ export const Card = ({ name, tweets, initialFollowers, avatar, filter }) => {
     }  
   };
 
-  const getButtonStatus = followers => {
-    return followers === initialFollowers ? 'follow' : 'following';
-  };
-
-  const buttonStatus = getButtonStatus(followers);
-  console.log(buttonStatus);
+  const buttonStatus = getButtonStatus(followers, initialFollowers);
 
   return (
     <CardWrapper className={filter === 'show all' || buttonStatus === filter ? '' : 'none'}>
