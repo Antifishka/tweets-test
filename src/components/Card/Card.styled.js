@@ -4,7 +4,7 @@ import { ReactComponent as LogoIcon } from "assets/icons/logo.svg";
 import bg from "assets/images/bg.png";
 import bg2x from "assets/images/bg@2x.png";
 
-export const CardWrapper = styled.div`
+export const CardWrapper = styled.li`
     position: relative;
     width: 380px;
     padding-top: 28px;
@@ -16,6 +16,8 @@ export const CardWrapper = styled.div`
 
     background: ${theme.colors.gradient};
 
+    transition: ${theme.transition.main};
+
     ::after {
         content: "";
         position: absolute;
@@ -25,6 +27,14 @@ export const CardWrapper = styled.div`
         height: 8px;
         box-shadow: ${theme.shadows.line};
         background: ${theme.colors.secondaryText};
+    }
+
+    :hover{
+       box-shadow: ${theme.shadows.innerAvatar}; 
+    }
+
+    &.none {
+        display: none;
     }
 `
 
@@ -80,7 +90,7 @@ export const Button = styled.button`
 
     color: ${theme.colors.mainText};
     background-color: ${({ children }) =>
-    children === "Following" ? theme.colors.accent : theme.colors.secondaryText};  
+    children === "following" ? theme.colors.accent : theme.colors.secondaryText};  
         
     opacity: 1;
     transition: opacity ${theme.transition.main};

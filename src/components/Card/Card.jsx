@@ -5,21 +5,26 @@ import { Avatar } from "components/Avatar/Avatar";
 import { getFormafedFollowers } from "helpers/getFormafedFollowers";
 import PropTypes from "prop-types";
 
-export const Card = ({ id, name, tweets, initialFollowers, avatar, onChange }) => {
+export const Card = ({ name, tweets, initialFollowers, avatar, filter }) => {
   const [followers, setFollowers] = useLocalStorage(`${name}`, initialFollowers);
 
   const handleClick = () => {
     if (followers === initialFollowers) {
       setFollowers((prevState) => prevState + 1);
-      // onChange(id);
     } else {
       setFollowers((prevState) => prevState - 1);
-      // onChange(id);
-    }
+    }  
   };
 
+  const getButtonStatus = followers => {
+    return followers === initialFollowers ? 'follow' : 'following';
+  };
+
+  const buttonStatus = getButtonStatus(followers);
+  console.log(buttonStatus);
+
   return (
-    <CardWrapper>
+    <CardWrapper className={filter === 'show all' || buttonStatus === filter ? '' : 'none'}>
       <Logo />
       <Thumb />
 
@@ -30,17 +35,16 @@ export const Card = ({ id, name, tweets, initialFollowers, avatar, onChange }) =
 
       <Button type="button"
         onClick={handleClick}>
-        {followers === initialFollowers ? "Follow" : "Following"}
+        {buttonStatus}
       </Button>
     </CardWrapper>
   );
 };
 
 Card.propTypes = {
-  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   tweets: PropTypes.number.isRequired,
   initialFollowers: PropTypes.number.isRequired,
   avatar: PropTypes.string.isRequired,
-  // onChange: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
 };

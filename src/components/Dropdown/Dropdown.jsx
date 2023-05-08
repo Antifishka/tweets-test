@@ -8,7 +8,7 @@ export const Dropdown = ({ onChange }) => {
         <Select onChange={onChange} defaultValue="show all" >
             <option value="show all">Show all</option>
             <option value="follow">Follow</option>
-            <option value="followings">Followings</option>
+            <option value="following">Followings</option>
         </Select>
     );
 };

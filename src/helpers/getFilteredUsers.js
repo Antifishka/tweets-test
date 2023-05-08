@@ -8,4 +8,4 @@ export const getFilteredUsers = (users, filter) => {
         } else if (filter === 'followings') {
             return users.filter((user) => user.following === true);
         };
-    };
+};
