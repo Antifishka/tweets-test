@@ -1,26 +1,24 @@
 import { Box } from "components/Box/Box";
-import { } from "./Footer.styled";
+import { Text } from "./Footer.styled";
+import { theme } from 'globalStyles/theme';
 
 export const Footer = () => {
 return (
-    <Box as="footer">
+    <Box position="absolute"
+        bottom="0"
+        left="0"
+        right="0"
+        p="0 32px"
+        as="footer">
         <Box display="flex"
             justifyContent="center"
             gridGap="8px"
+            p="16px 0"
+            borderTop={theme.borders.normal}
             as="ul">
-                <Box display="flex"  gridGap="8px" as="li">
-                    <span class="footer__text footer__text--indent">&#169; 2023 </span>
-                    <p class="footer__text footer__text--indent" data-key="rights">
-                    |  All Rights Reserved  |
-                    </p>
-                </Box>
-                <Box display="flex" as="li">
-                    <p class="footer__text" data-key="developed">Developed with</p>
-                    <svg class="footer__icon" width="14" height="13">
-                        <use href="images/symbol-defs.svg#heart-icon"></use>
-                    </svg>
-                    <p>by Antifishka 😉</p>
-                </Box>
+            <li><Text>&#169; 2023 </Text></li>
+            <li><Text>|  All Rights Reserved  |</Text></li>
+            <li><Text> Developed by Antifishka 😉</Text></li>
         </Box>
     </Box>
     );
