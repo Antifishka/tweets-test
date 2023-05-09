@@ -17,3 +17,7 @@ export const StyledLink = styled(Link)`
     color: ${theme.colors.accent};
   }
 `;
+
+export const Arrow = styled.svg`
+  fill: currentColor;
+`;

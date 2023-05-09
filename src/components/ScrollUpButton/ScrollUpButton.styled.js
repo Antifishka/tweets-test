@@ -4,7 +4,7 @@ import { theme } from 'globalStyles/theme';
 export const ScrollButton = styled.button`
     position: fixed;
     right: 32px;
-    bottom: 32px;
+    bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
