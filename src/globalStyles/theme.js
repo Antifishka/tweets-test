@@ -1,4 +1,6 @@
-export const theme = {
+import { createTheme } from 'styled-breakpoints'; 
+
+export const themeStyles = {
     colors: {
         mainText: '#373737',
         secondaryText: '#EBD8FF',
@@ -13,7 +15,8 @@ export const theme = {
         monospace: 'Menlo, monospace',
     },
     fontSizes: {
-        xs: '16px',
+        xxs: '12px',
+        xs: '14px',
         s: '18px',
         m: '20px',
         l: '32px',
@@ -48,5 +51,14 @@ export const theme = {
     },
     transition: {
         main: '250ms cubic-bezier(0.4, 0, 0.2, 1);',
-    },   
+    },  
+    breakpoints: ['420px', '768px', '1300px'],
 }
+
+const themeBreakpoints = createTheme({
+    mobile: '420px',
+    tablet: '768px',
+    pc: '1300px',
+});
+
+export const theme = { ...themeStyles, ...themeBreakpoints };

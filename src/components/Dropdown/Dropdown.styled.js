@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { theme } from 'globalStyles/theme';
+import { up } from 'styled-breakpoints';
 
 export const Select = styled.select`
     padding: 14px;
@@ -11,7 +12,6 @@ export const Select = styled.select`
     
     cursor: pointer;
 
-    font-size: ${theme.fontSizes.s};
     font-weight: ${theme.fontWeights.semiBold};
     text-transform: uppercase;
 
@@ -22,5 +22,13 @@ export const Select = styled.select`
 
     :hover{
         background-color: ${theme.colors.accent};
+    }
+
+    ${up('mobile')} {
+        font-size: ${theme.fontSizes.s};
+    }
+
+    ${up('tablet')} {
+        font-size: ${theme.fontSizes.m};
     }
 `;

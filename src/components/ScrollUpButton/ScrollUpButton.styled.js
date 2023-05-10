@@ -3,6 +3,7 @@ import { theme } from 'globalStyles/theme';
 
 export const ScrollButton = styled.button`
     position: fixed;
+    z-index: 100;
     right: 32px;
     bottom: 16px;
     display: flex;

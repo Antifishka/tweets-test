@@ -1,6 +1,8 @@
 import { Box } from "components/Box/Box";
 import { Text, SocialItem, SocialLink } from "./Footer.styled";
-import { FaGithub, FaLinkedin, FaFacebook} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { useBreakpoint } from 'styled-breakpoints/react-styled';
+ import { up } from 'styled-breakpoints';
 import { theme } from 'globalStyles/theme';
 
 export const Footer = () => {
@@ -15,14 +17,17 @@ return (
             justifyContent="center"
             alignItems="center"
             gridGap="8px"
-            pt="16px"
-            mb="16px"
+            p="16px 0"
             borderTop={theme.borders.normal}>
             <Text>&#169; 2023 </Text>
 
             <span>| </span>
                 
-            <Box display="flex" justifyContent="center" alignItems="end" gridGap="8px" as="ul">
+            <Box display="flex"
+                justifyContent="center"
+                alignItems="end"
+                gridGap={["4px", "4px", "8px"]}
+                as="ul">
                 <SocialItem>
                     <SocialLink href="https://github.com/Antifishka?tab=repositories"
                         target="_blank"
@@ -50,7 +55,7 @@ return (
             </Box>
             <span> |</span>
             
-            <Text> Developed by Antifishka 😉</Text>
+            <Text> {useBreakpoint(up('tablet')) ? 'Developed by Antifishka 😉' : 'Antifishka 😉' }</Text>
         </Box>
     </Box>
     );

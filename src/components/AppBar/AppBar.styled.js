@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { theme } from "globalStyles/theme";
+import { up } from 'styled-breakpoints';
 
 export const Header = styled.header`
   display: flex;
@@ -15,29 +16,32 @@ export const Header = styled.header`
 `;
 
 export const Link = styled(NavLink)`
-    padding: 14px;
-    min-width: 107px;
-    border-radius: ${theme.radii.button};
-    box-shadow: ${theme.shadows.button};
-    cursor: pointer;
+  padding: 14px;
+  min-width: 100px;
+  border-radius: ${theme.radii.button};
+  box-shadow: ${theme.shadows.button};
+  cursor: pointer;
 
-    font-size: ${theme.fontSizes.s};
-    font-weight: ${theme.fontWeights.semiBold};
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
+  font-weight: ${theme.fontWeights.semiBold};
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
 
-    color: ${theme.colors.mainText};
-    background-color: ${theme.colors.secondaryText};
+  color: ${theme.colors.mainText};
+  background-color: ${theme.colors.secondaryText};
 
-    transition: ${theme.transition.main};
+  transition: ${theme.transition.main};
     
-    &.active {
-        color: ${theme.colors.secondaryText};
-        background-color: ${theme.colors.background};
-    }
-    :hover:not(.active),
-    :focus-visible:not(.active){
-        background-color: ${theme.colors.accent};
-    }
+  &.active {
+    color: ${theme.colors.secondaryText};
+    background-color: ${theme.colors.background};
+  }
+  :hover:not(.active),
+  :focus-visible:not(.active){
+    background-color: ${theme.colors.accent};
+  }
+
+  ${up('mobile')} {
+    font-size: ${theme.fontSizes.s};
+  }
 `;

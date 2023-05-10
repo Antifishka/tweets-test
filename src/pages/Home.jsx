@@ -19,7 +19,7 @@ export default function Home() {
             </Helmet>
 
             <Box fontWeight= '700'
-                fontSize={theme.fontSizes.xl}
+                fontSize={[theme.fontSizes.l, theme.fontSizes.l, theme.fontSizes.xl]}
                 textAlign='center'
                 color={theme.colors.mainText}
                 as="h1">

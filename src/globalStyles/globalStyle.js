@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: ${theme.fontWeights.medium};
-    font-size: ${theme.fontSizes.s};
+    font-size: ${theme.fontSizes.xs};
     line-height: ${theme.lineHeights.text};
   }
   #root { 
