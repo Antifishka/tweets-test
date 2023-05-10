@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/tweets-test/static/css/main.17654e45.css",
-    "main.js": "/tweets-test/static/js/main.5553757a.js",
-    "static/js/309.dbc631aa.chunk.js": "/tweets-test/static/js/309.dbc631aa.chunk.js",
-    "static/js/546.2ff56f6e.chunk.js": "/tweets-test/static/js/546.2ff56f6e.chunk.js",
+    "main.js": "/tweets-test/static/js/main.0d2f4aa2.js",
+    "static/js/309.b45854ed.chunk.js": "/tweets-test/static/js/309.b45854ed.chunk.js",
+    "static/js/546.42c9a7fb.chunk.js": "/tweets-test/static/js/546.42c9a7fb.chunk.js",
     "static/js/270.9177bfc7.chunk.js": "/tweets-test/static/js/270.9177bfc7.chunk.js",
-    "static/js/320.99b6fe46.chunk.js": "/tweets-test/static/js/320.99b6fe46.chunk.js",
+    "static/js/320.6db83c92.chunk.js": "/tweets-test/static/js/320.6db83c92.chunk.js",
     "static/media/Montserrat-SemiBold.ttf": "/tweets-test/static/media/Montserrat-SemiBold.62b8eee010e3957d425f.ttf",
     "static/media/Montserrat-Medium.ttf": "/tweets-test/static/media/Montserrat-Medium.a281f04d4c8926e7dea1.ttf",
     "static/media/Montserrat-Regular.ttf": "/tweets-test/static/media/Montserrat-Regular.94bb495fba6077f669ed.ttf",
@@ -15,14 +15,14 @@
     "static/media/logo.svg": "/tweets-test/static/media/logo.eb74a9cfcc8c2946c8beb2961898c04b.svg",
     "index.html": "/tweets-test/index.html",
     "main.17654e45.css.map": "/tweets-test/static/css/main.17654e45.css.map",
-    "main.5553757a.js.map": "/tweets-test/static/js/main.5553757a.js.map",
-    "309.dbc631aa.chunk.js.map": "/tweets-test/static/js/309.dbc631aa.chunk.js.map",
-    "546.2ff56f6e.chunk.js.map": "/tweets-test/static/js/546.2ff56f6e.chunk.js.map",
+    "main.0d2f4aa2.js.map": "/tweets-test/static/js/main.0d2f4aa2.js.map",
+    "309.b45854ed.chunk.js.map": "/tweets-test/static/js/309.b45854ed.chunk.js.map",
+    "546.42c9a7fb.chunk.js.map": "/tweets-test/static/js/546.42c9a7fb.chunk.js.map",
     "270.9177bfc7.chunk.js.map": "/tweets-test/static/js/270.9177bfc7.chunk.js.map",
-    "320.99b6fe46.chunk.js.map": "/tweets-test/static/js/320.99b6fe46.chunk.js.map"
+    "320.6db83c92.chunk.js.map": "/tweets-test/static/js/320.6db83c92.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.17654e45.css",
-    "static/js/main.5553757a.js"
+    "static/js/main.0d2f4aa2.js"
   ]
 }
