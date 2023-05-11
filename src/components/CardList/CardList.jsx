@@ -4,11 +4,14 @@ import PropTypes from "prop-types";
 
 export const CardList = ({ displayedUsers, filter }) => {
     return (
-        <Box display="flex"
+        <Box
+            display="flex"
             flexWrap="wrap"
+            justifyContent={["center", "center", "center", "start"]}
             gridGap="48px"
             mb="32px"
-            as="ul">
+            as="ul"
+        >
             {displayedUsers?.map(({ id, user, tweets, followers, avatar }) => (
                 <Card key={id}
                     name={user}

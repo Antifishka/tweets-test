@@ -8,11 +8,11 @@ import { theme } from 'globalStyles/theme';
 export const Layout = () => {
   return (
     <Box
-      position="relative" 
+      position="relative"
       minHeight="100%"
       maxWidth={theme.sizes.maxWidth}
       m="0 auto"
-      p="0 32px">
+      p={["0 20px", "0 20px", "0 32px"]}>
       <AppBar />
 
       <Suspense fallback={null}>
