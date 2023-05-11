@@ -55,7 +55,7 @@ export default function Tweets() {
     }, [users, page]);
 
     return (
-        <Box p="32px 0 128px" 
+        <Box p="32px 0 142px" 
             minHeight="100%"
             as="main">
             <Helmet>
