@@ -8,7 +8,7 @@ export const CardList = ({ displayedUsers, filter }) => {
             display="flex"
             flexWrap="wrap"
             justifyContent={["center", "center", "center", "start"]}
-            gridGap="48px"
+            gridGap={["20px", "20px", "48px", "48px"]}
             mb="32px"
             as="ul"
         >
