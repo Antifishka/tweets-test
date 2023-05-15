@@ -9,11 +9,6 @@ export const themeStyles = {
         accent: '#5CD3A8',
     },
     space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
-    fonts: {
-        body: 'system-ui, sans-serif',
-        heading: 'Cantarell, sans-serif',
-        monospace: 'Menlo, monospace',
-    },
     fontSizes: {
         xxs: '12px',
         xs: '14px',
